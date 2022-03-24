@@ -1,5 +1,7 @@
 package com.example.apptivedevstudy.debug
 
+import com.example.apptivedevstudy.debug.enums.Tile
+
 class Row(var values: MutableList<Tile> = mutableListOf()) {
     val size: Int get() = values.size
 
