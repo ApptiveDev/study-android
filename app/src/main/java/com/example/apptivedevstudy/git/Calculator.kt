@@ -13,7 +13,7 @@ class Calculator: ICalculator<Int> {
     }
 
     override fun subtract(a: Int, b: Int): Int {
-
+        return a-b
     }
 
     override fun multiply(a: Int, b: Int): Int {
