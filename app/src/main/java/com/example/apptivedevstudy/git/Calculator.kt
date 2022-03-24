@@ -17,7 +17,7 @@ class Calculator: ICalculator<Int> {
     }
 
     override fun multiply(a: Int, b: Int): Int {
-
+        return a*b
     }
 
     fun printResult() {
