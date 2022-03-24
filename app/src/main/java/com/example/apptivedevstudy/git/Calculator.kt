@@ -20,6 +20,10 @@ class Calculator: ICalculator<Int> {
 
     }
 
+    override fun divide(a: Int, b: Int): Int {
+        return a / b
+    }
+
     fun printResult() {
         println("마지막 계산 결과: $result")
     }
