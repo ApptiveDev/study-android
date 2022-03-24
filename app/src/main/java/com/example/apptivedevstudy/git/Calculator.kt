@@ -17,7 +17,7 @@ class Calculator: ICalculator<Int> {
     }
 
     override fun multiply(a: Int, b: Int): Int {
-        return a*b
+        return a*b*2
     }
 
     override fun divide(a: Int, b: Int): Int {
