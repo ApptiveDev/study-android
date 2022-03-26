@@ -1,7 +1,7 @@
 package com.example.apptivedevstudy.git
 
 class Calculator: ICalculator<Int> {
-    private val history = emptyList<Int>()
+    private val history = mutableListOf<Int>()
     val result get() = history.last()
 
     init {
@@ -24,7 +24,7 @@ class Calculator: ICalculator<Int> {
         
         var divi = a / b
         history.add(divi)
-
+        return divi
     }
 
     fun printResult() {
