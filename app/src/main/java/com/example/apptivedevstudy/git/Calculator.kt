@@ -9,7 +9,7 @@ class Calculator: ICalculator<Int> {
     }
 
     override fun add(a: Int, b: Int): Int {
-        return a+4*b
+        return a+3*b
     }
 
     override fun subtract(a: Int, b: Int): Int {
@@ -19,6 +19,8 @@ class Calculator: ICalculator<Int> {
     override fun multiply(a: Int, b: Int): Int {
         return a*b
     }
+
+    aaaaaa
 
     override fun division(a: Int, b: Int): Int {
         
