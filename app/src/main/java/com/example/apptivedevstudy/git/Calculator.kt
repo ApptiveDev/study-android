@@ -29,5 +29,6 @@ class Calculator: ICalculator<Int> {
 
     fun printResult() {
         println("마지막 계산 결과: $result")
+        println("1")
     }
 }
