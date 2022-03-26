@@ -5,19 +5,19 @@ class Calculator: ICalculator<Int> {
     val result get() = history.last()
 
     init {
-
+        println("계산기 인스턴스 생성")
     }
 
     override fun add(a: Int, b: Int): Int {
-
+        return a+b
     }
 
     override fun subtract(a: Int, b: Int): Int {
-
+        return a-b
     }
 
     override fun multiply(a: Int, b: Int): Int {
-
+        return a*b
     }
 
     override fun division(a: Int, b: Int): Int {
