@@ -20,6 +20,13 @@ class Calculator: ICalculator<Int> {
 
     }
 
+    override fun division(a: Int, b: Int): Int {
+        
+        var divi = a / b
+        history.add(divi)
+
+    }
+
     fun printResult() {
         println("마지막 계산 결과: $result")
     }
