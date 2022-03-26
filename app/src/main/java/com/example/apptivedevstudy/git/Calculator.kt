@@ -9,19 +9,15 @@ class Calculator: ICalculator<Int> {
     }
 
     override fun add(a: Int, b: Int): Int {
-        return a+2*b
+
     }
 
     override fun subtract(a: Int, b: Int): Int {
-        return a-b
+
     }
 
     override fun multiply(a: Int, b: Int): Int {
-        return a*b*2*3
-    }
 
-    override fun divide(a: Int, b: Int): Int {
-        return a / b
     }
 
     fun printResult() {

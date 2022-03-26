@@ -1,7 +1,6 @@
 package com.example.apptivedevstudy.debug
 
 import com.example.apptivedevstudy.debug.dataclass.Location
-import com.example.apptivedevstudy.debug.enums.Tile
 import java.util.*
 
 fun getMatrix(): Matrix {

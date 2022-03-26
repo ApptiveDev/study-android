@@ -1,13 +1,8 @@
 package com.example.apptivedevstudy.debug
 
-import com.example.apptivedevstudy.debug.dataclass.Location
-import com.example.apptivedevstudy.debug.dataclass.Size
-import com.example.apptivedevstudy.debug.enums.Tile
-
 class Matrix(private val rows: MutableList<Row>) {
     val value: List<Row> get() = rows
-    val size: Size
-        get() {
+    val size: Size get() {
         return Size(
             width = value[0].size,
             height = value.size
