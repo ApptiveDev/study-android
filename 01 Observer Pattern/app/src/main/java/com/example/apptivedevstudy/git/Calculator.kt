@@ -20,8 +20,6 @@ class Calculator: ICalculator<Int> {
         return a*b
     }
 
-    aaaaaa
-
     override fun division(a: Int, b: Int): Int {
         
         var divi = a / b
