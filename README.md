@@ -8,4 +8,27 @@
 - [by (Class)](#by-class)
 - [by (Property)](#by-property)
 
-[uzun](https://uzun.notion.site/TEMP-DOCs-cbbc837590e14a55afd24e01e82253f9)
+### Observer Pattern
+(이해한 것을 적어주세요)
+
+### Bridge Pattern
+(이해한 것을 적어주세요)
+
+### by (Class)
+(이해한 것을 적어주세요)
+
+### by (Property)
+(이해한 것을 적어주세요)
+
+## 의논해볼 것
+- 디자인 패턴의 종류
+- LiveData와 State는 어떻게 Observer 패턴을 활용할까?
+- 각 패턴의 예시
+
+---
+
+## 궁금한 점
+
+## 참고자료
+
+## 비고
