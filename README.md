@@ -1,33 +1,35 @@
-# apptive-dev-study
-개발팀 정기 스터디 📚
+# Android UI
+## 목표
+Android UI 프레임워크인 Jetpack Compose에 대한 기본 다루기
 
-## 📐 규칙
-- 스터디 2시간 전까지 PR을 요청합니다.
-- 외부 블로그 등에 정리한 경우 README.md에 링크를 적습니다.
+## 문제
+![login](https://i.imgur.com/2kGMASJ.png)
+Jetpack Compose를 통해 위 UI를 구현해주세요.  
+텍스트 박스 동작, 버튼 동작 등 기능은 구현하지 않아도 됩니다.
 
-### 브랜치 구조
-- 세션 명과 참여자 명으로 구성됩니다.
-- ```세션명/참여자명``` 브랜치에 결과물을 업로드하고 ```세션명/main``` 브랜치에 PR합니다.
-- 참여자 명은 성을 제외한 자신의 영문 이름(소문자)로 합니다.
-
+## 요구사항
+- Jetpack Compose v1.2.1 사용
+- 아래와 같은 패키지로 작성
 ```plain
-main
-  <세션명1>/main         // 세션 개요가 위치하는 곳
-    <세션명1>/<참여자명1>
-    <세션명1>/<참여자명2>
-    ...
-  <세션명2>/main
-    ...
+|- (패키지)
+    |- _enum // 필요한 경우
+        - ...
+    |- view
+        - login.kt (원하는 경우 분리 가능)
+    - MainActivity.kt
 ```
 
-### 폴더 구조
-- 최상위 폴더에 성을 제외한 자신의 영문 이름(소문자)로 폴더를 만듭니다.
-- 조사한 결과물에 대한 간단한 설명을 이름/README.md
-```plain
-|-
-  README.md
-  |- <참여자 이름>
-    - README.md
-    - 결과물1
-    - 결과물2...
-```
+## 소스
+- https://github.com/Apptive2022-1/apptive-android-study/tree/android-ui/main/resource
+
+## 추가하고 싶은 기능
+(위 화면에 추가하고자 하는 기능을 적어주세요)
+
+---
+
+## 궁금한 점
+
+## 참고자료
+
+## 비고
+
