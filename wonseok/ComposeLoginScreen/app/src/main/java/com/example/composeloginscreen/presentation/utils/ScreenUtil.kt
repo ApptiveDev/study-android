@@ -16,9 +16,9 @@ object ScreenUtil {
 
     @Composable
     fun width(percent: Int? = null): Dp {
-        val maxHeight = LocalConfiguration.current.screenWidthDp
-        if (percent == null) return maxHeight.dp
+        val maxWidth = LocalConfiguration.current.screenWidthDp
+        if (percent == null) return maxWidth.dp
 
-        return (maxHeight * percent/100).dp
+        return (maxWidth * percent/100).dp
     }
 }
