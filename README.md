@@ -5,11 +5,15 @@
 ## 키워드
 - [Android Components](#android-components)
     - [Activity](#activity)
-    - [Service](#service)
-    - [Broadcast Receiver](#broadcast-receiver)
     - [Content Provider](#content-provider)
+    - [Service (Optional)](#service-optional)
+    - [Broadcast Receiver (Optional)](#broadcast-receiver-optional)
+- [Android Lifecycle](#android-lifecycle)
+    - [Views](#views)
+    - [Jetpack Compose](#jetpack-compose)
 - [Project Structure](#project-structure)
-- [Jetpack Compose](#jetpack-compose)
+- [Jetpack Compose](#jetpack-compose-1)
+
 
 ### Android Components
 (이해한 것을 적어주세요)
@@ -20,14 +24,11 @@
 #### Content Provider
 (이해한 것을 적어주세요)
 
----
-(아래 두 항목은 조사하지 않아도 됩니다.)
-#### Service
+#### Service (Optional)
 (이해한 것을 적어주세요)
 
-#### Broadcast Receiver
+#### Broadcast Receiver (Optional)
 (이해한 것을 적어주세요)
----
 
 ### Android Lifecycle
 #### Views
@@ -68,7 +69,7 @@
 - 안드로이드 스튜디오 USB/Wifi 디버깅
 
 ## 의논해볼 것
-
+- [ ] 화면을 회전시키면 Activity의 Lifecycle은 어떻게 변할까요? 
 ---
 
 ## 궁금한 점
