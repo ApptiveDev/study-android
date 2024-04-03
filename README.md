@@ -9,10 +9,11 @@
     - [Service (Optional)](#service-optional)
     - [Broadcast Receiver (Optional)](#broadcast-receiver-optional)
 - [Android Lifecycle](#android-lifecycle)
-    - [Views](#views)
-    - [Jetpack Compose](#jetpack-compose)
+    - [Activity](#activity-1)
+    - [Composable](#composable)
 - [Project Structure](#project-structure)
-- [Jetpack Compose](#jetpack-compose-1)
+- [Jetpack Compose](#jetpack-compose)
+
 
 
 ### Android Components
