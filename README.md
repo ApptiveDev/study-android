@@ -40,13 +40,10 @@ Jetpack Compose를 통해 위 UI를 구현해주세요.
 	- 아이콘이 들어간 버튼
 
 
-<<<<<<< HEAD
-=======
 ## 궁금한 점
 
 ## 참고자료
 ![image](https://user-images.githubusercontent.com/84652886/199020258-05aa7d6c-6542-49f6-8d5f-a3c47335c746.png)
 
 ## 비고
->>>>>>> f3da19f (Update README.md)
 
