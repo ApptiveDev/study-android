@@ -31,11 +31,11 @@
 (이해한 것을 적어주세요)
 
 ### Android Lifecycle
-#### Views
-(전통적인 View 방식에서 Activity와 View의 Lifecycle은 어떻게 될까요?)
+#### Activity
+(Activity의 라이프사이클은 어떻게 될까요?)
 
-#### Jetpack Compose
-(Jetpack Compose에서 Activity와 View의 Lifecycle은 어떻게 될까요?)
+#### Composable
+(UI는 Composable 단위로 구성됩니다. Composable의 라이프사이클은 어떻게 될까요?)
 
 ### Project Structure
 (Android Studio에서 프로젝트를 새로 시작하면 기본적인 폴더 구조가 설정됩니다.  
@@ -69,7 +69,8 @@
 - 안드로이드 스튜디오 USB/Wifi 디버깅
 
 ## 의논해볼 것
-- [ ] 화면을 회전시키면 Activity의 Lifecycle은 어떻게 변할까요? 
+- [ ] 화면을 회전시키면 Activity의 Lifecycle은 어떻게 변할까요?
+- [ ] Jetpack Compose 이전에는 Composable 대신 View 객체로 UI를 사용했습니다. 어떤 점이 다를까요? (Lifecycle 등)  
 ---
 
 ## 궁금한 점
