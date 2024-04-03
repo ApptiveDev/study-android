@@ -10,17 +10,31 @@
     - [Content Provider](#content-provider)
 - [Project Structure](#project-structure)
 - [Jetpack Compose](#jetpack-compose)
+
 ### Android Components
 (이해한 것을 적어주세요)
 
 #### Activity
 (이해한 것을 적어주세요)
-#### Service
-(이해한 것을 적어주세요)
-#### Broadcast Receiver
-(이해한 것을 적어주세요)
+
 #### Content Provider
 (이해한 것을 적어주세요)
+
+---
+(아래 두 항목은 조사하지 않아도 됩니다.)
+#### Service
+(이해한 것을 적어주세요)
+
+#### Broadcast Receiver
+(이해한 것을 적어주세요)
+---
+
+### Android Lifecycle
+#### Views
+(전통적인 View 방식에서 Activity와 View의 Lifecycle은 어떻게 될까요?)
+
+#### Jetpack Compose
+(Jetpack Compose에서 Activity와 View의 Lifecycle은 어떻게 될까요?)
 
 ### Project Structure
 (Android Studio에서 프로젝트를 새로 시작하면 기본적인 폴더 구조가 설정됩니다.  
