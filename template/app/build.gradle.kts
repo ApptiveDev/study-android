@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.apptive.template"
+    namespace = "com.apptive.layout"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.apptive.template"
+        applicationId = "com.apptive.layout"
         minSdk = 28
         targetSdk = 34
         versionCode = 1
