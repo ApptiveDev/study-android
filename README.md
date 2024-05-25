@@ -24,6 +24,7 @@ Jetpack Compose를 활용하여 위 화면을 구현해주세요. 버튼 클릭 
 - Login 화면에 대한 진입점 함수는 `LoginScreen()`입니다. 
 - 화면의 각 요소는 @Composable 함수로 분리, 구분되어 있어야 합니다.
 - 이름, 비밀번호 입력창은 동일한 @Composable 함수를 사용합니다.
+- 아이콘은 [Material Icons](https://fonts.google.com/icons)를 사용합니다. 코드에서 `Icons.Default.Person`과 같은 방식으로 불러올 수 있습니다. 
 
 ## 더 해보기
 다음 중 하나 이상을 골라 도전해보세요!
