@@ -52,5 +52,5 @@ private fun LoginBackground(
 (코드를 작성하면서 자유롭게 적어주세요)
 
 ## 메모
-(기억하고 싶은 것을 자유롭게 적어주세요)
+![img.png](img.png)
 
