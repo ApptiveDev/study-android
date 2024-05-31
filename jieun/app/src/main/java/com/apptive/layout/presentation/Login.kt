@@ -3,7 +3,9 @@ package com.apptive.layout.presentation
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -36,6 +38,26 @@ import com.apptive.layout.R
 
 @Composable
 fun LoginScreen() {
+    backgroundBox {
+        loginColumn {
+            logoImage()
+            inputForm(
+                "Username",
+                Icons.Default.Person
+            )
+            Spacer(Modifier.size(10.dp))
+            inputForm(
+                "Password",
+                Icons.Default.Lock
+            )
+            Spacer(Modifier.size(10.dp))
+            signInButton()
+        }
+    }
+}
+
+@Composable
+fun backgroundBox(content: @Composable BoxScope.() -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -43,33 +65,20 @@ fun LoginScreen() {
                 painterResource(id = R.drawable.background_image),
                 contentScale = ContentScale.FillBounds
             ),
-        contentAlignment = Alignment.Center
-    ) {
-        loginContent()
-    }
+        contentAlignment = Alignment.Center,
+        content = content
+    )
 }
 
 @Composable
-private fun loginContent() {
+fun loginColumn(content: @Composable ColumnScope.() -> Unit){
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(start = 20.dp, end = 20.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        logoImage()
-        inputForm(
-            "Username",
-            Icons.Default.Person
-        )
-        Spacer(Modifier.size(10.dp))
-        inputForm(
-            "Password",
-            Icons.Default.Lock
-        )
-        Spacer(Modifier.size(10.dp))
-        signInButton()
-    }
+        horizontalAlignment = Alignment.CenterHorizontally,
+        content = content
+    )
 }
 
 @Composable
