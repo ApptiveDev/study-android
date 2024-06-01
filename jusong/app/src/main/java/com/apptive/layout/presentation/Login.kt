@@ -43,6 +43,45 @@ private fun loginLogo(icon: ImageVector) {
     )
 }
 
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun inputForm(icon: ImageVector, label: String) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(10.dp, 5.dp)
+            .background(
+                color = Color.White,
+                shape = RoundedCornerShape(20.dp)
+            ),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Icon(
+            modifier = Modifier
+                .padding(10.dp),
+            imageVector = icon,
+            contentDescription = null)
+        TextField(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(end = 20.dp),
+            value = "",
+            onValueChange = {},
+            placeholder = {
+                Text(
+                    text = label
+                )
+            },
+            colors = TextFieldDefaults.textFieldColors(
+                containerColor = Color.White,
+                unfocusedIndicatorColor = Color.Transparent,
+                focusedIndicatorColor = Color.Transparent
+            )
+        )
+    }
+}
+
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 private fun LoginPreview() {
