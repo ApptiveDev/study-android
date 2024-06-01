@@ -29,7 +29,19 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun LoginScreen() {
-
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(10.dp)
+            .background(Color.LightGray),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        loginLogo(icon = Icons.Default.FavoriteBorder)
+        inputForm(icon = Icons.Default.Person, label = "Username")
+        inputForm(icon = Icons.Default.Lock, label = "Password")
+        inputButton(text = "SIGN IN")
+    }
 }
 
 @Composable
