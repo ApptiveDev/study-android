@@ -82,6 +82,19 @@ private fun inputForm(icon: ImageVector, label: String) {
     }
 }
 
+@Composable
+private fun inputButton(text: String) {
+    Button(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(10.dp),
+        onClick = { /*TODO*/ }) {
+        Text(
+            text = text
+        )
+    }
+}
+
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 private fun LoginPreview() {
