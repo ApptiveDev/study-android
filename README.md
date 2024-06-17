@@ -17,7 +17,7 @@
 
 
 ### Android Components
-(이해한 것을 적어주세요)
+(안드로이드 앱은 4개의 컴포넌트로 구성됩니다. 개발자는 컴포넌트 구조를 따르며 코드를 작성해야 하는데, 각각의 컴포넌트는 어떤 역할을 하는지 적어주세요.)  
 
 #### Activity
 (이해한 것을 적어주세요)
@@ -30,6 +30,10 @@
 
 #### Broadcast Receiver (Optional)
 (이해한 것을 적어주세요)
+
+### Intent
+(Intent는 상기한 컴포넌트 사이에 메시지를 전달하는 객체입니다.  
+Intent에 대해 이해한 바를 적어주세요.)  
 
 ### Android Lifecycle
 #### Activity
@@ -61,6 +65,7 @@
     - build.gradle(Module)
     - settings.gradle
 ```
+
 ### Jetpack Compose
 (Box, Column, Row 등 Jetpack Compose의 기본적인 레이아웃의 종류에 대해 조사해주세요.)
 
@@ -71,7 +76,8 @@
 
 ## 의논해볼 것
 - [ ] 화면을 회전시키면 Activity의 Lifecycle은 어떻게 변할까요?
-- [ ] Jetpack Compose 이전에는 Composable 대신 View 객체로 UI를 사용했습니다. 어떤 점이 다를까요? (Lifecycle 등)  
+- [ ] Jetpack Compose 이전에는 Composable 대신 View 객체로 UI를 사용했습니다. 어떤 점이 다를까요? (Lifecycle 등)
+- [ ] build.gradle은 module 레벨, project 레벨로 나뉘어집니다. 둘은 어떤 차이일까요?  
 ---
 
 ## 궁금한 점
