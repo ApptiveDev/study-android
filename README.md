@@ -17,18 +17,12 @@
 
 
 ### Android Components
-(안드로이드 앱은 4개의 컴포넌트로 구성됩니다. 개발자는 컴포넌트 구조를 따르며 코드를 작성해야 하는데, 각각의 컴포넌트는 어떤 역할을 하는지 적어주세요.)  
+(안드로이드 앱은 4개의 컴포넌트로 구성됩니다. 개발자는 컴포넌트 구조를 따르며 코드를 작성해야 하는데, 그중 다음 2개의 컴포넌트는 각각 어떤 역할을 하는지 적어주세요.)  
 
 #### Activity
 (이해한 것을 적어주세요)
 
 #### Content Provider
-(이해한 것을 적어주세요)
-
-#### Service (Optional)
-(이해한 것을 적어주세요)
-
-#### Broadcast Receiver (Optional)
 (이해한 것을 적어주세요)
 
 ### Intent
@@ -67,7 +61,46 @@ Intent에 대해 이해한 바를 적어주세요.)
 ```
 
 ### Jetpack Compose
+#### Layout
 (Box, Column, Row 등 Jetpack Compose의 기본적인 레이아웃의 종류에 대해 조사해주세요.)
+
+#### Entry Point
+(아래는 Jetpack Compose 프로젝트르 생성했을 때 기본적으로 생성되는 코드입니다. 앱에서 가장 처음 실행되는 코드이기도 합니다. 각 문장이 무엇을 의미하는지 주석을 달아주세요.)
+
+```kotlin
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            LayoutTheme {
+                // A surface container using the 'background' color from the theme
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    Greeting("Android")
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun Greeting(name: String, modifier: Modifier = Modifier) {
+    Text(
+        text = "Hello $name!",
+        modifier = modifier
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview() {
+    LayoutTheme {
+        Greeting("Android")
+    }
+}
+```
 
 ## 할일
 - 안드로이드 스튜디오 에뮬레이터 설정
