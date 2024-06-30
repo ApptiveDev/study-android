@@ -50,6 +50,7 @@ private fun LoginBackground(
   ...
 }
 ```
+- 텍스트 입력창에 키보드 입력값이 그대로 표시되도록 수정하기 (remember, state)
 
 ## 궁금점과 질문
 (코드를 작성하면서 자유롭게 적어주세요)
