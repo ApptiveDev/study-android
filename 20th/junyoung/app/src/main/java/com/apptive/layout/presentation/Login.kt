@@ -1,7 +1,11 @@
 package com.apptive.layout.presentation
 
+import android.util.Log
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
@@ -10,6 +14,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -33,6 +38,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.apptive.layout.R
 
@@ -40,12 +46,21 @@ import com.apptive.layout.R
 fun LoginScreen() {
     backgroundBox {
         loginColumn {
-            logoImage()
+            var isClicked by remember { mutableStateOf(false) }
+            val imageXOffset by animateDpAsState(
+                targetValue = if (isClicked) 0.dp else 100.dp,
+                animationSpec = tween(2000)
+            )
+
+            logoImage(imageXOffset) {
+                isClicked = !isClicked
+            }
             inputForm(
                 "Username",
                 Icons.Default.Person
             )
             Spacer(Modifier.size(10.dp))
+            Log.d("[Wonseok]", "main 함수가 다시 실핼될까?")
             inputForm(
                 "Password",
                 Icons.Default.Lock
@@ -82,13 +97,18 @@ fun loginColumn(content: @Composable ColumnScope.() -> Unit){
 }
 
 @Composable
-fun logoImage() {
+fun logoImage(
+    offsetX: Dp,
+    onClicked: () -> Unit,
+) {
     Image(
         imageVector =  Icons.Default.FavoriteBorder,
         contentDescription = "logoImage",
         modifier = Modifier
+            .offset(offsetX, 0.dp)
             .padding(10.dp)
             .size(70.dp)
+            .clickable { onClicked() }
     )
 }
 
@@ -107,7 +127,9 @@ fun inputForm(
     label:String,
     iconImage: ImageVector
 ) {
-    var text by remember { mutableStateOf(label) }
+    var text = remember { "초기123" }
+
+    Log.d("[Wonseok]", "InputForm 다시 실행됨 " + text)
     Row (
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
@@ -126,12 +148,16 @@ fun inputForm(
         )
         BasicTextField(
             value = text,
-            onValueChange = { text = it },
+            onValueChange = {
+                text = it
+                Log.d("[Wonseok]", "변수 값 바뀜 " + text)
+                            },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 15.dp, bottom = 15.dp, start = 10.dp, end = 15.dp)
         )
     }
+    Log.d("[Wonseok]", "State에 의해 inputForm 함수 다시 렌더링 끝")
 }
 
 @Preview(showSystemUi = true, showBackground = true)
