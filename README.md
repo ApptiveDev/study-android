@@ -66,7 +66,7 @@ private fun SplashBackground(
 }
 
 @Composable
-private fun IconArea(
+private fun IconsArea(
     showIcon: Boolean,   // true일 때 또다른 아이콘이 나타난다.
     offsetX: Dp,         // Home 아이콘의 x 위치 오프셋
     alpha : Float,       // Home 아이콘의 투명도
@@ -76,7 +76,7 @@ private fun IconArea(
 }
 
 @Composable
-private fun ButtonArea(
+private fun ButtonsArea(
     modifier: Modifier,
     onLeftMove: () -> Unit = {},
     onRightMove: () -> Unit = {},
@@ -86,6 +86,7 @@ private fun ButtonArea(
     ...
 }
 ```
+- Android Studio의 Start Interaction Mode, Start Animation Preview 기능으로 앱을 실행하지 않고 테스트해보세요.
 
 ## 궁금점과 질문
 (코드를 작성하면서 자유롭게 적어주세요)
