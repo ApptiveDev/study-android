@@ -17,8 +17,12 @@
 - Jetpack Compose(activityCompose)는 1.9.0v 이상을 이용합니다.
 - Kotlin은 1.9.0v 이상을 이용합니다.
 - Android Studio Iguana 이상의 환경에서 코드를 작성합니다.
+- 공동 작업을 위해 `20th` 폴더를 Android Studio로 열어 과제를 진행합니다.
+  - 각자의 패키지를 정의하여 그곳에서 별도로 진행합니다. 
+  - 과제 진행을 위한 초기 코드는 `com.apptive.layout.template` 패키지에 있습니다. 이곳의 파일을 자신의 패키지에 복사한 후 과제를 진행합니다.
+  - ex) `com.apptive.layout.junyoung.presentation`, `com.apptive.layout.jinseo.presentation`
 - `androidx.navigation:navigation-compose`를 종속성에 새로 추가합니다. (버전은 2.7.7 이상)
-- `presentation/navigation` 폴더를 만들어 내비게이션 관련 코드를 이곳에 작성합니다.
+- `presentation.navigation` 패키지를 만들어 내비게이션 관련 코드를 이곳에 작성합니다.
   - `Screen` 파일을 만들고, `sealed class Screen`을 작성합니다.
   - `NavGraph` 파일을 만들고, `SetupNavGraph(...)` 함수를 작성합니다.
 
