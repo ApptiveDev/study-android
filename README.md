@@ -1,5 +1,5 @@
-# State, Animation
- 두 화면을 연결하고 이동하는 내비게이션과 코드를 병렬적으로 실행하는 Coroutine에 대해 알아봅시다.
+# Navigation
+ 두 화면을 연결하고 이동하는 내비게이션과 코드를 병렬적으로 실행하는 Side Effect 대해 알아봅시다.
 
 ## 📐 진행방식
 - 현재 브랜치로부터 `android-navigation/<본인 이름>` 브랜치를 생성하고 이동합니다.
