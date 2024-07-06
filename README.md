@@ -43,6 +43,7 @@
   - 아이디와 비밀번호가 일치하지 않으면 경고창을 띄웁니다.
 - `androidx.navigation:navigation-compose` 종속성을 `Gradle Version Catalog` 형식으로 추가해보세요.
 - `navHostController`를 `lateinit`으로 Activity의 멤버로 정의해보세요. 전역변수처럼 활용할 수 있습니다.
+- Preview의 Interactive Mode에서도 내비게이션이 제대로 동작하도록 개선해보세요.
 
 ## 궁금점과 질문
 (코드를 작성하면서 자유롭게 적어주세요)
