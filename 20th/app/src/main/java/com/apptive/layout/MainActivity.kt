@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.apptive.layout.jinseo.presentation.LoginScreen
 import com.apptive.layout.junyoung.presentation.SplashScreen
 import com.apptive.layout.ui.theme.LayoutTheme
 
@@ -23,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    SplashScreen()
+                    LoginScreen()
                 }
             }
         }
