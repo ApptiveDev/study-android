@@ -2,12 +2,11 @@
  화면이 렌더링되는 기본 원리인 State를 이해하고 화면 요소에 다양한 애니메이션과 효과를 적용해봅시다.
 
 ## 📐 진행방식
-- 현재 브랜치로부터 `android-state/<본인 이름>` 브랜치를 생성하고 이동합니다.
-- 지난 과제(`android-compose`)에 구현했던 자신의 프로젝트를 루트폴더에 복사합니다.
-  - 지난 과제 브랜치로 이동하여 본인 프로젝트 폴더를 어딘가에 복사합니다.
-  - `android-state/<본인 이름>` 브랜치로 이동하고 복사해둔 폴더를 루트폴더에 붙여넣습니다.
-- Android Studio로 복사해온 프로젝트 폴더를 열어 과제를 진행합니다.
-- 과제를 구현한 후 `android-state/main` 브랜치로 Pull Request를 올립니다.
+- 현재 브랜치에서 `<자신의 기수>` 안드로이드 프로젝트 폴더를 엽니다.
+  - 만약 `<자신의 기수>` 폴더가 없다면 안드로이드 스튜디오로 새로 만듭니다.
+  - 새로 만드는 프로젝트의 패키지명은 `com.apptive.state`로 합니다.
+- `com.apptive.state.<자신의 이름>`으로 패키지를 생성합니다.
+- 자신의 패키지에서 과제를 구현한 후 commit, push합니다.
 
 ## 📑 문제
 ![Home Clicked](/images/01-home-clicked.gif)  
@@ -28,8 +27,8 @@
 - Jetpack Compose(activityCompose)는 1.9.0v 이상을 이용합니다.
 - Kotlin은 1.9.0v 이상을 이용합니다.
 - Android Studio Iguana 이상의 환경에서 코드를 작성합니다.
-- `presentation/Splash.kt`에 `SplashScreen()` 컴포저블을 정의하고 이곳에 구현합니다.
-- `presentation/Splash.kt`에 @Preview 함수를 정의하여 화면 미리보기를 보면서 코드를 작성합니다.
+- `Splash.kt`에 `SplashScreen()` 컴포저블을 정의하고 이곳에 구현합니다.
+- `Splash.kt`에 @Preview 함수를 정의하여 화면 미리보기를 보면서 코드를 작성합니다.
 - 아이콘은 Material Icons를 사용합니다. 코드에서 `Icons.Default.Person`과 같은 방식으로 불러올 수 있습니다.
 
 ## 🧸 기능 요구사항
