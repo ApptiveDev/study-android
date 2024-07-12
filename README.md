@@ -2,10 +2,12 @@
 Jetpack Compose의 기본 레이아웃인 `Box, Row, Column`를 활용하여 화면을 구성하고, `Modifier`로 다양한 속성을 조정해봅시다.
 
 ## 📐 진행방식
-- 현재 브랜치로부터 `android-compose/<본인 이름>` 브랜치를 생성하고 이동합니다.
-- `template` 폴더를 복사하고 `<자신의 영문명>`으로 변경합니다.
-- Android Studio로 `<자신의 영문명>` 폴더를 열어 과제를 진행합니다.
-- 과제를 구현한 후 `android-compose/main` 브랜치로 Pull Request를 올립니다.
+- 현재 브랜치에서 `<자신의 기수>` 안드로이드 프로젝트 폴더를 엽니다.
+  - 만약 `<자신의 기수>` 폴더가 없다면 안드로이드 스튜디오로 새로 만듭니다.
+  - 새로 만드는 프로젝트의 패키지명은 `com.apptive.compose`로 합니다.
+- `com.apptive.compose.<자신의 이름>`으로 패키지를 생성합니다.
+- `com.apptive.compose.template` 패키지의 파일을 자신의 패키지로 복사합니다.
+- 자신의 패키지에서 과제를 구현한 후 commit, push합니다.
 
 ## 📑 문제
 ![problem-screen](./resource/result.png)  
