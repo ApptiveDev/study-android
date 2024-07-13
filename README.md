@@ -2,12 +2,11 @@
  두 화면을 연결하고 이동하는 내비게이션과 코드를 병렬적으로 실행하는 Side Effect 대해 알아봅시다.
 
 ## 📐 진행방식
-- 현재 브랜치로부터 `android-navigation/<본인 이름>` 브랜치를 생성하고 이동합니다.
-- 지난 과제(`android-state`)에 구현했던 자신의 프로젝트를 루트폴더에 복사합니다.
-  - 지난 과제 브랜치로 이동하여 본인 프로젝트 폴더를 어딘가에 복사합니다.
-  - `android-navigation/<본인 이름>` 브랜치로 이동하고 복사해둔 폴더를 루트폴더에 붙여넣습니다.
-- Android Studio로 복사해온 프로젝트 폴더를 열어 과제를 진행합니다.
-- 과제를 구현한 후 `android-navigation/main` 브랜치로 Pull Request를 올립니다.
+- 현재 브랜치에서 `<자신의 기수>` 안드로이드 프로젝트 폴더를 엽니다.
+  - 만약 `<자신의 기수>` 폴더가 없다면 안드로이드 스튜디오로 새로 만듭니다.
+  - 새로 만드는 프로젝트의 패키지명은 `com.apptive.navigation`로 합니다.
+- `com.apptive.navigation.<자신의 이름>`으로 패키지를 생성합니다.
+- 자신의 패키지에서 과제를 구현한 후 commit, push합니다.
 
 ## 📑 문제
 ![Launched Effect](./images/launched-effect-navigation.gif)  
