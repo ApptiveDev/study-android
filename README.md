@@ -20,7 +20,13 @@
 - 자신의 패키지에서 과제를 구현하면서 수시로 commit, push합니다.
 
 ## 📑 문제
+![lazy-column](./images/02-scrollable-lazy-column.gif)  
+(화면 스크롤 기능)
 
+![nested-navigation](./images/03-nested-nav-problem.gif)  
+(하단 내비게이션 바)
+
+위처럼 화면 스크롤 기능과 하단 내비게이션 기능을 구현해주세요. 이때, 화면에 표시할 데이터는 Lorem Picsum API로부터 불러와야 합니다.
 
 
 ## 🌀 환경 요구사항
@@ -44,8 +50,7 @@
   - LoremPicsum API의 JSON의 형식을 참고합니다.
   - 데이터 클래스의 각 멤버에는 적절한 `@SerializedName` 어노테이션을 붙입니다.
 - API 엔드포인트를 담을 `LoremPicsumService`를 정의합니다.
-  - 코루틴을 알고 있다면 => `suspend fun getImageList(): Response<...>`
-  - 코루틴을 모른다면 => `fun getImageList(): Call<...>`
+  - `suspend fun getImageList(): Response<...>`
 - API 호출을 수행할 `RetrofitClient`를 정의합니다.
   - 싱글톤으로 정의합니다. (`object`)
   - 멤버로 `loremPicsum: LoremPicsumService`를 갖습니다.
@@ -55,9 +60,13 @@
   - 매개변수로 `Modifier`, `LoremPicsumImage`를 포함합니다.
   - 검정색의 테두리를 갖습니다.
   - 모서리가 둥근 직사각형 모양을 갖습니다.
-- 화면에 두 열을 만들어 `ImageInfoCard`를 나열합니다.
-  - 두 열 모두 스크롤이 가능해야 합니다. (`LazyColumn`)
-- 
+- 화면은 중앙의 컨텐츠 영역과 하단의 내비게이션바 영역을 갖습니다. (`Scaffold`)
+  - 컨텐츠 영역에는 두 열을 만들어 `ImageInfoCard`를 나열합니다.
+    - 두 열 모두 스크롤이 가능해야 합니다. (`LazyColumn`)
+  - 내비게이션바 영역에는 세 가지 버튼을 만듭니다. (`NavigationBar`)
+    - 각각의 내비게이션 버튼을 위해 `NavItem` 데이터 클래스를 정의합니다.
+      - `label: String`, `icon:ImageVector`, `route: String`을 멤버로 포함합니다.
+
 ## 🔥 더 해보기
 - API 주소에 변수를 받을 수 있도록 개선해보세요.
   - https://picsum.photos/v2/list?page=2&limit=100에서 `page`, `limit` 부분 
@@ -66,7 +75,18 @@
 - 두 열이 따로 스크롤되는 것이 아닌, 다함께 스크롤 되도록 개선해보세요. (`LazyVerticalGrid`)
 - 컴포저블이 non-UI 로직을 갖지 않도록 ViewModel을 정의하도록 리팩토링 해보세요. (`MVVM`)
 - 이미지 정보가 아닌, 이미지를 표시하도록 개선해보세요. (`Coil`)
-- `HomeNavGraph`를 따로 정의하고, 하단 버튼으로 화면을 이동해보세요. (`Nested Navigation`)  
+- `HomeNavGraph`를 따로 정의하고, 하단 버튼으로 화면을 이동해보세요. (`Nested Navigation`)
+```kotlin
+Scaffold(
+  bottomBar = {
+    HomeBottomBar(...)  
+  },
+  ...
+) {
+  HomeNavGraph(...)
+}
+```  
 ![nested navgraph](./images/01-nested-nav-graph.png)  
+- Retrofit을 싱글톤이 아닌, DI(Dependency Injection)으로 받도록 해보세요.
 
 ## 궁금점과 질문
