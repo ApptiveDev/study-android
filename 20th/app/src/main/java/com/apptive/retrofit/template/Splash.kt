@@ -37,7 +37,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.apptive.retrofit.template.navigation.Screen
+import com.apptive.retrofit.template.navigation.RootScreen
 import com.apptive.retrofit.template.navigation.SetupNavGraph
 import com.apptive.retrofit.ui.theme.RetrofitTheme
 import kotlinx.coroutines.delay
@@ -69,7 +69,7 @@ fun SplashScreen(navController: NavHostController) {
     LaunchedEffect(key1 = true) {
         iconState = IconState.NORMAL
         delay(4000)
-        navController.navigate(Screen.Login.route)
+        navController.navigate(RootScreen.Login.route)
     }
 
 
@@ -196,7 +196,7 @@ private fun SplashPreview() {
         val navController = rememberNavController()
         SetupNavGraph(
             navController = navController,
-            startDestination = Screen.Splash
+            startDestination = RootScreen.Splash
         )
     }
 }

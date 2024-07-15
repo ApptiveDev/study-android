@@ -56,7 +56,6 @@
   - 멤버로 `loremPicsum: LoremPicsumService`를 갖습니다.
   - `RetrofitClient.loremPicsum.getImageList()`와 같이 API를 호출합니다.
 - 이미지 정보를 화면에 표시할 컴포저블을 정의합니다. (`ImageInfoCard`)
-  - `model` 패키지를 정의하여 이곳에 컴포저블을 작성합니다. (optional)
   - 매개변수로 `Modifier`, `LoremPicsumImage`를 포함합니다.
   - 검정색의 테두리를 갖습니다.
   - 모서리가 둥근 직사각형 모양을 갖습니다.
