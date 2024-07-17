@@ -1,6 +1,7 @@
-package com.apptive.layout.jieun
+package com.apptive.layout.jieun.presentation
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -23,6 +24,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -34,7 +36,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.apptive.layout.ui.theme.LayoutTheme
+import kotlinx.coroutines.delay
 
 enum class IconPosition(val offsetX: Dp) {
     LEFT((-100).dp), CENTER(0.dp), RIGHT(100.dp)
@@ -45,7 +49,7 @@ enum class IconState(val alpha: Float) {
 }
 
 @Composable
-fun SplashScreen() {
+fun SplashScreen(navController: NavController) {
     var showCheckIcon by remember { mutableStateOf(false) }
     var iconState by remember { mutableStateOf(IconState.NORMAL) }
     var iconPosition by remember { mutableStateOf(IconPosition.CENTER) }
@@ -61,6 +65,12 @@ fun SplashScreen() {
     )
 
     SplashBackground {
+        // 수정 부분
+        LaunchedEffect(key1 = true) {
+            delay(3000)
+            navController.navigate(Screen.Login.route)
+        }
+
         IconsArea(
             showIcon = showCheckIcon,
             offsetX = iconOffset,
@@ -176,10 +186,10 @@ private fun ButtonsArea(
     }
 }
 
-@Preview(showSystemUi = true, showBackground = true)
-@Composable
-private fun SplashPreview() {
-    LayoutTheme {
-        SplashScreen()
-    }
-}
+//@Preview(showSystemUi = true, showBackground = true)
+//@Composable
+//private fun SplashPreview() {
+//    LayoutTheme {
+//        SplashScreen()
+//    }
+//}

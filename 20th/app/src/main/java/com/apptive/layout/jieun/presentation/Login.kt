@@ -1,4 +1,4 @@
-package com.apptive.layout.jieun
+package com.apptive.layout.jieun.presentation
 
 import android.util.Log
 import androidx.compose.animation.core.animateDpAsState
@@ -40,10 +40,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.apptive.layout.R
 
 @Composable
-fun LoginScreen() {
+fun LoginScreen(navController: NavController) {
     backgroundBox {
         loginColumn {
             var isClicked by remember { mutableStateOf(false) }
@@ -66,7 +67,7 @@ fun LoginScreen() {
                 Icons.Default.Lock
             )
             Spacer(Modifier.size(10.dp))
-            signInButton()
+            signInButton(navController)
         }
     }
 }
@@ -113,9 +114,11 @@ fun logoImage(
 }
 
 @Composable
-fun signInButton() {
+fun signInButton(navController: NavController) {
     Button(
-        onClick = {},
+        onClick = {
+            navController.navigate(Screen.Home.route)
+        },
         modifier = Modifier.fillMaxWidth()
     ) {
         Text("SIGN IN")
@@ -160,8 +163,8 @@ fun inputForm(
     Log.d("[Wonseok]", "State에 의해 inputForm 함수 다시 렌더링 끝")
 }
 
-@Preview(showSystemUi = true, showBackground = true)
-@Composable
-private fun LoginPreview() {
-    LoginScreen()
-}
+//@Preview(showSystemUi = true, showBackground = true)
+//@Composable
+//private fun LoginPreview() {
+//    LoginScreen()
+//}
