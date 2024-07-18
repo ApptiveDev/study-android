@@ -104,9 +104,10 @@ fun logoImage(
     onClicked: () -> Unit,
 ) {
     Box(
+        contentAlignment = Alignment.Center,
         modifier = Modifier
             .fillMaxWidth()
-            .offset(offsetX, 0.dp)
+            .offset(0.dp)
     )
     {
         Image(
@@ -114,7 +115,7 @@ fun logoImage(
             contentDescription = "logoImage",
             //alignment = Alignment.Center,
             modifier = Modifier
-                .offset(offsetX, 0.dp)
+
                 .padding(10.dp)
                 .size(70.dp)
                 .clickable { onClicked() }
