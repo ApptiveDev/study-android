@@ -62,13 +62,17 @@ fun LoginScreen(navController: NavController) {
                 Icons.Default.Person
             )
             Spacer(Modifier.size(10.dp))
-            Log.d("[Wonseok]", "main 함수가 다시 실핼될까?")
+
             inputForm(
                 "Password",
                 Icons.Default.Lock
             )
             Spacer(Modifier.size(10.dp))
-            signInButton(navController)
+            signInButton(
+                onClicked = {
+                    navController.navigate("home")
+                }
+            )
         }
     }
 }
@@ -108,8 +112,7 @@ fun logoImage(
         modifier = Modifier
             .fillMaxWidth()
             .offset(0.dp)
-    )
-    {
+    ) {
         Image(
             imageVector = Icons.Default.FavoriteBorder,
             contentDescription = "logoImage",
@@ -120,13 +123,14 @@ fun logoImage(
                 .size(70.dp)
                 .clickable { onClicked() }
         )
-}
+
+    }
 }
 
 @Composable
-fun signInButton(navController: NavController) {
+fun signInButton(onClicked: () -> Unit) {
     Button(
-        onClick = {navController.navigate("home")},
+        onClick = {onClicked()},
         modifier = Modifier.fillMaxWidth()
     ) {
         Text("SIGN IN")

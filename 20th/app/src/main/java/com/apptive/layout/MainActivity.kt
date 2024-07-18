@@ -32,19 +32,21 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    NavGraph()
+                    NavGraph("splash")
                 }
             }
         }
     }
 }
 
-
 @Composable
-fun NavGraph(){
+fun NavGraph(
+    startDestination: String
+    // TODO: startDestintion을 인자로 받기
+){
     val navController = rememberNavController()
-    NavHost(navController, startDestination = "splash" ){
-        composable("splash"){ SplashesScreen(navController)}
+    NavHost(navController, startDestination = startDestination ){
+        composable("splash"){ SplashesScreen(navController)} // TODO: 문자열 리터럴 sealed class로 분리하기
         composable("login"){ LoginScreen(navController)}
         composable("home"){ HomeScreen()}
     }
