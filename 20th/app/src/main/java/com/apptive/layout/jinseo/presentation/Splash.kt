@@ -36,12 +36,15 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.apptive.layout.ui.theme.LayoutTheme
 
-enum class IconPosition(val offsetX: Dp) {
+enum class IconPosition(val offsetX: Dp) { // 각 상수는 offsetX라는 값을 가지며,offset은 좌우로 얼마나 이동할지를 의미함
     LEFT((-100).dp), CENTER(0.dp), RIGHT(100.dp)
 }
 
-enum class IconState(val alpha: Float) {
-    HIDDEN(0f), NORMAL(1f)
+
+
+enum class IconState(val alpha: Float) { //각 상태는 alpha라는 속성을 가지며, 이는 아이콘의 불투명도(투명도)를 나타냄.
+    HIDDEN(0f), NORMAL(1f) // HIDDEN은 alpha 값이 0f로, 아이콘이 완전히 투명(보이지 않음)을 의미
+                                        // NORMAL은 alpha 값이 1f로, 아이콘이 완전히 불투명(보임)을 의미
 }
 
 @Composable

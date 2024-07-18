@@ -40,10 +40,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.apptive.layout.R
 
 @Composable
-fun LoginScreen() {
+fun LoginScreen(navController: NavController) {
     backgroundBox {
         loginColumn {
             var isClicked by remember { mutableStateOf(false) }
@@ -66,7 +68,7 @@ fun LoginScreen() {
                 Icons.Default.Lock
             )
             Spacer(Modifier.size(10.dp))
-            signInButton()
+            signInButton(navController)
         }
     }
 }
@@ -101,21 +103,29 @@ fun logoImage(
     offsetX: Dp,
     onClicked: () -> Unit,
 ) {
-    Image(
-        imageVector =  Icons.Default.FavoriteBorder,
-        contentDescription = "logoImage",
+    Box(
         modifier = Modifier
+            .fillMaxWidth()
             .offset(offsetX, 0.dp)
-            .padding(10.dp)
-            .size(70.dp)
-            .clickable { onClicked() }
     )
+    {
+        Image(
+            imageVector = Icons.Default.FavoriteBorder,
+            contentDescription = "logoImage",
+            //alignment = Alignment.Center,
+            modifier = Modifier
+                .offset(offsetX, 0.dp)
+                .padding(10.dp)
+                .size(70.dp)
+                .clickable { onClicked() }
+        )
+}
 }
 
 @Composable
-fun signInButton() {
+fun signInButton(navController: NavController) {
     Button(
-        onClick = {},
+        onClick = {navController.navigate("home")},
         modifier = Modifier.fillMaxWidth()
     ) {
         Text("SIGN IN")
@@ -163,5 +173,7 @@ fun inputForm(
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
 private fun LoginPreview() {
-    LoginScreen()
+
+        LoginScreen(navController = rememberNavController())
+
 }
