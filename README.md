@@ -119,4 +119,4 @@ fun GreetingPreview() {
 - 출처는 중요합니다. 되도록 작성해주세요.
 
 ## 비고
-25.03.04 KimGiyun 수정.
+25.03.24 KimGiyun 수정.
