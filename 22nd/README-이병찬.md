@@ -46,6 +46,8 @@
 | 데이터 전달   | putExtra로 데이터 추가 & getExtra로 받기  | `intent.putExtra("key", value)`                               |
 | 결과 반환     | ActivityResult API 사용                   | `registerForActivityResult(...)`                              |
 
+---
+
 ### Android Lifecycle
 
 #### Activity
@@ -63,33 +65,39 @@ graph TD;
 
 #### Composable
 
-(UI는 Composable 단위로 구성됩니다. Composable의 라이프사이클은 어떻게 될까요?)
+```mermaid
+graph TD;
+  Initial_Composition --> Recomposition;
+  Recomposition --> Recomposition;
+  Recomposition --> Disposal;
+```
+
+---
 
 ### Project Structure
-
-(Android Studio에서 프로젝트를 새로 시작하면 기본적인 폴더 구조가 설정됩니다.  
-아래를 참고하여 각 폴더와 파일의 역할에 대해 이해하는 바를 적어주세요.)
 
 ```plain
 |- app
     |- manifests
-        - AndroidManifest.xml
+        - AndroidManifest.xml ← (앱의 설정 파일)
     |- kotlin+java
-        |- package(com.apptive.app...)
-        |- package(androidTest)
-        |- package(test)
+        |- package(com.apptive.app...) ← (앱의 핵심 소스 코드 포함)
+        |- package(androidTest) ← (UI 테스트 코드)
+        |- package(test)  ← (단위 테스트,비즈니스 로직 테스트)
     |- res
-        |- drawable
-        |- mipmap (생략해도 됨)
+        |- drawable ← (앱에서 사용할 이미지 파일 저장, PNG, SVG 등)
+        |- mipmap ← (앱 아이콘 파일 저장, 런처 아이콘)
         |- values
-            - colors.xml
-            - strings.xml
-            |- theme (생략해도 됨)
+            - colors.xml ← (앱에서 사용할 색상을 정의)
+            - strings.xml ← (앱에서 사용할 문자열(텍스트) 저장)
+            |- theme ← (앱의 테마 및 스타일 정의, 생략 가능)
 |- Gradle Scripts
-    - build.gradle(Project)
-    - build.gradle(Module)
-    - settings.gradle
+    - build.gradle(Project) ← (프로젝트 전체 설정, Gradle 플러그인 및 버전 관리)
+    - build.gradle(Module) ← (앱 모듈 설정, 의존성 추가, SDK 버전 설정)
+    - settings.gradle ← (프로젝트에 포함된 모듈 정의)
 ```
+
+---
 
 ### Jetpack Compose
 
@@ -97,50 +105,55 @@ graph TD;
 
 (Box, Column, Row, Spacer 등 **Jetpack Compose의 기본적인 레이아웃의 종류**에 대해 조사해주세요.)
 
+- **Box** - 자식 요소를 겹쳐서 배치 가능한 컨테이너
+- **Column** - 세로 방향(수직)으로 구성 요소를 배치하는 레이아웃
+- **Row** - 가로 방향(수평)으로 구성 요소를 배치하는 레이아웃
+- **Spacer** - 특정한 크기의 빈 공간을 만들 때 사용하는 레이아웃 요소
+
 #### Entry Point
 
 (아래는 Jetpack Compose 프로젝트르 생성했을 때 기본적으로 생성되는 코드입니다. 앱에서 가장 처음 실행되는 코드이기도 합니다. 각 문장이 무엇을 의미하는지 주석을 달아주세요.)
 
 ```kotlin
+// MainActivity 클래스 정의 (Jetpack Compose 기반의 액티비티)
 class MainActivity : ComponentActivity() {
+    // onCreate() 메서드: 액티비티가 생성될 때 실행되는 함수
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            LayoutTheme {
-                // A surface container using the 'background' color from the theme
+        super.onCreate(savedInstanceState) // 부모 클래스의 onCreate() 실행 (기본 설정 수행)
+        setContent { // Compose UI를 설정하는 블록 (Jetpack Compose에서 UI를 정의하는 역할)
+            LayoutTheme { // LayoutTheme를 적용 (앱의 테마 설정)
+                // Surface: 배경 색상을 가지는 컨테이너 역할을 함
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    modifier = Modifier.fillMaxSize(), // 화면 전체를 채우도록 설정
+                    color = MaterialTheme.colorScheme.background // 테마에서 지정된 배경색 사용
                 ) {
-                    Greeting("Android")
+                    Greeting("Android") // Greeting() 함수 호출하여 "Hello Android!" 표시
                 }
             }
         }
     }
 }
 
+// @Composable: 이 함수가 Compose UI를 생성하는 함수임을 나타냄
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
-        modifier = modifier
+        text = "Hello $name!", // 화면에 "Hello Android!" 등의 텍스트를 표시
+        modifier = modifier // 사용자가 전달할 수 있는 Modifier (기본값으로 아무 설정 없음)
     )
 }
 
-@Preview(showBackground = true)
+// @Preview: 미리보기 기능을 제공하는 애너테이션
+@Preview(showBackground = true) // 배경이 보이는 상태에서 UI 미리보기 가능
 @Composable
 fun GreetingPreview() {
-    LayoutTheme {
-        Greeting("Android")
+    LayoutTheme { // 테마 적용
+        Greeting("Android") // Greeting() 함수 실행하여 "Hello Android!" 출력
     }
 }
 ```
 
-## 할일
-
-- 안드로이드 스튜디오 에뮬레이터 설정
-- 안드로이드 스튜디오 SDK 설치 (28~)
-- 안드로이드 스튜디오 USB/Wifi 디버깅 (IOS 모바일 디바이스 제외.)
+---
 
 ## 의논해볼 것
 
@@ -149,15 +162,3 @@ fun GreetingPreview() {
 - [ ] build.gradle은 module 레벨, project 레벨로 나뉘어집니다. 둘은 어떤 차이일까요?
 
 ---
-
-## 궁금한 점
-
-- 반드시 1개 이상 작성합니다.
-
-## 참고자료
-
-- 출처는 중요합니다. 되도록 작성해주세요.
-
-## 비고
-
-25.03.24 KimGiyun 수정.
