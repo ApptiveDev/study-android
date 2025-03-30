@@ -158,4 +158,4 @@ fun GreetingPreview() {
 - [!Android Developers 공식 문서](https://developer.android.com/guide/components/fundamentals)
 
 ## 비고
-25.03.24 KimGiyun 수정.
+25.03.30 yeochaeeon 수정.
