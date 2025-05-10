@@ -10,11 +10,14 @@ import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -26,6 +29,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -33,7 +37,7 @@ import com.apptive.state.ui.theme.StateTheme
 
 //왼쪽으로 100.dp, 오른쪽으로 100.dp 움직이도록 정의하려면 어떻게 해야할까요?
 enum class IconPosition(val offsetX: Dp) {
-    LEFT((/*Todo*/).dp), CENTER(0.dp), RIGHT(/*Todo*/.dp)
+    LEFT((-100).dp), CENTER(0.dp), RIGHT(100.dp)
 }
 
 //Modifier.alpha() 속성을 확인해볼까요?
@@ -47,41 +51,41 @@ enum class IconState(val alpha: Float) {
  */
 @Composable
 fun SplashScreen() {
-    var iconState by remember { mutableStateOf(IconState./*Todo*/) } // 왜 remember를 사용할까요?
-    var iconPosition by remember { mutableStateOf(IconPosition./*Todo*/) } // 기본값을 적용해두려면 어떻게 해야할까요?
+    var iconState by remember { mutableStateOf(IconState.NORMAL) } // 왜 remember를 사용할까요?
+    var iconPosition by remember { mutableStateOf(IconPosition.CENTER) } // 기본값을 적용해두려면 어떻게 해야할까요?
 
     //좌, 또는 우로 이동하는 애니메이션이 1초 동안 동작하게 합시다.
     val offsetIcon by animateDpAsState(
-        targetValue = iconPosition./*Todo*/,
-        animationSpec = tween(/*Todo*/),
-        label = "/*Todo 라벨 이름을 적어 타인이 알 수 있도록 합시다.*/"
+        targetValue = iconPosition.offsetX,
+        animationSpec = tween(1000),
+        label = "x축으로 움직이는 아이콘에 적용되는 애니메이션입니다."
     )
 
     //나타나거나, 사라지는 애니메이션이 1.5초 동안 동작하게 합시다.
     val iconAlpha by animateFloatAsState(
-        targetValue = iconState./*Todo*/,
-        animationSpec = tween(/*Todo*/),
-        label = "/*Todo 라벨 이름을 적어 타인이 알 수 있도록 합시다.*/"
+        targetValue = iconState.alpha,
+        animationSpec = tween(1500),
+        label = "1.5초 간 나타나거나, 사라지는 애니메이션입니다."
     )
 
     SplashBackground {
         IconsArea(
-            offsetX = /*Todo*/, // 각 파라미터에 어떤 값을 주어야할까요?
-            alpha = /*Todo*/,
+            offsetX = offsetIcon, // 각 파라미터에 어떤 값을 주어야할까요?
+            alpha = iconAlpha,
         )
 
         /*아이콘의 현 위치에 따라 동작하는 코드를 작성해봅시다.*/
         ButtonsArea(
-            modifier = Modifier.align(Alignment./*Todo*/), //화면 아래의 가운데에 정렬해볼까요?
+            modifier = Modifier.align(Alignment.BottomCenter), //화면 아래의 가운데에 정렬해볼까요?
             onLeftMove = { // 좌측이동의 경우
                 iconPosition =
-                    if (iconPosition == IconPosition.LEFT) IconPosition./*Todo*/
-                    else IconPosition./*Todo*/
+                    if (iconPosition == IconPosition.LEFT) IconPosition.CENTER
+                    else IconPosition.LEFT
             },
             onRightMove = { // 우측이동의 경우
                 iconPosition =
-                    if (iconPosition == IconPosition.RIGHT) IconPosition./*Todo*/
-                    else IconPosition./*Todo*/
+                    if (iconPosition == IconPosition.RIGHT) IconPosition.CENTER
+                    else IconPosition.RIGHT
             },
             onAppear = { iconState = IconState.NORMAL },
             onDisappear = { iconState = IconState.HIDDEN }
@@ -99,10 +103,10 @@ private fun SplashBackground(
 ) {
     Box(
         modifier = Modifier
-            ./*Todo*/ //화면 크기를 최대한도로 키워봅시다.
-            .background(/*Todo*/) //검은색으로 채워봅시다.
+            .fillMaxSize() //화면 크기를 최대한도로 키워봅시다.
+            .background(Color.Black) //검은색으로 채워봅시다.
             .padding(10.dp),
-        contentAlignment = Alignment./*Todo*/,
+        contentAlignment = Alignment.Center,
         content = content
     )
 }
@@ -122,12 +126,11 @@ private fun IconsArea(
         Icon(
             modifier = Modifier
                 .size(100.dp)
-                .offset(/*Todo*/, /*Todo*/) // 오프셋을 설정해봅시다. Hint! 아이콘은 X축으로 움직여요.
-                .alpha(/*Todo*/) // 알파값을 조정해봅시다.
-                .clickable { /*Todo*/ },
-            imageVector = Icons.Default./*Todo*/,
-            tint = /*Todo*/, //흰색으로 채워봅시다.
-            contentDescription = "/*Todo*/"
+                .offset(offsetX, 0.dp) // 오프셋을 설정해봅시다. Hint! 아이콘은 X축으로 움직여요.
+                .alpha(alpha), // 알파값을 조정해봅시다. (0f -> 1f)
+            imageVector = Icons.Default.Home,
+            tint = Color.White, //흰색으로 채워봅시다.
+            contentDescription = "집 아이콘"
         )
     }
 }
@@ -152,39 +155,38 @@ private fun ButtonsArea(
     Column(modifier = modifier) {
         Row {
             Button(
-                modifier = Modifier.width(100.dp),
-                onClick = /*Todo*/
+                onClick = onLeftMove
             ) {
-                Text(text = "/*Todo*/")
+                Text(text = "왼쪽이동")
             }
 
             Spacer(modifier = Modifier.width(20.dp))
 
             Button(
-                modifier = Modifier.width(100.dp),
-                onClick = /*Todo*/
+                onClick = onRightMove
             ) {
-                Text(text = "/*Todo*/")
+                Text(text = "오른쪽이동")
             }
         }
 
         Row {
             Button(
                 modifier = Modifier.width(100.dp),
-                onClick = /*Todo*/
+                onClick = onAppear
             ) {
-                Text(text = "/*Todo*/")
+                Text(text = "나타나기")
             }
 
             Spacer(modifier = Modifier.width(20.dp))
 
             Button(
                 modifier = Modifier.width(100.dp),
-                onClick = /*Todo*/
+                onClick = onDisappear
             ) {
-                Text(text = "/*Todo*/")
+                Text(text = "사라지기")
             }
         }
+        Spacer(Modifier.height(30.dp))
     }
 }
 
@@ -196,6 +198,6 @@ private fun ButtonsArea(
 @Composable
 private fun SplashPreview() {
     StateTheme {
-        /*Todo*/  //Preview를 보려면 어떤 Composable을 등록해야할까요?
+        SplashScreen()  //Preview를 보려면 어떤 Composable을 등록해야할까요?
     }
 }
