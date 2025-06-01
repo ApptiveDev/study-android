@@ -1,4 +1,4 @@
-package com.apptive.coroutine.template
+package com.apptive.coroutine.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -11,30 +11,32 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
-/**
- * Apptive Android Study - Coroutine main의 templete입니다.
- * @author 김기윤
- */
 @Composable
 fun TimerScreen(){
-    var seconds /*Todo*/ /*Todo*/ { /*Todo*/(0) } /* Compose에서 상태를 관리하고, 값을 사용하려면 어떻게 해야할까요? */
-    var isRunning /*Todo*/ /*Todo*/ { /*Todo*/(false) }
+    var seconds by remember { mutableStateOf(0) }
+    var isRunning by remember { mutableStateOf(false) }
     val coroutineScope = rememberCoroutineScope()
-    var job /*Todo*/ /*Todo*/ { /*Todo*/<Job?>(null) } /* Coroutine은 Job instance를 사용합니다. */
+    var job by remember { mutableStateOf<Job?>(null) }
 
     val formattedTime = String.format(
-        "%02d:%02d", seconds / 60, seconds % 60 /* Kotlin에서는 이와 같은 String Formatting을 지원합니다. */
+        "%02d:%02d", seconds / 60, seconds % 60
     )
 
     Box(
@@ -45,13 +47,13 @@ fun TimerScreen(){
     ) {
         Text(
             text = formattedTime,
-            fontSize = 48./*Todo*/, /* 폰트는 어떤 단위를 사용하나요? */
+            fontSize = 48.sp,
             fontWeight = FontWeight.Bold,
-            modifier = Modifier.align(Alignment./*Todo*/)
+            modifier = Modifier.align(Alignment.Center)
         )
 
         Row(
-            modifier = Modifier.align(Alignment./*Todo*/),
+            modifier = Modifier.align(Alignment.BottomCenter),
             horizontalArrangement = Arrangement.Center
         ) {
             Button(
@@ -59,8 +61,8 @@ fun TimerScreen(){
                     if (isRunning) {
                         job?.cancel()
                     } else {
-                        job = /*Todo*/.launch {
-                            while (/*Todo*/) { /* Coroutine Scope 내에서 사용가능한 상태값을 찾아볼까요? */
+                        job = coroutineScope.launch {
+                            while (isActive) {
                                 delay(1000)
                                 seconds += 1
                             }
