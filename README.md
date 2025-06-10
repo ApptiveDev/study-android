@@ -34,8 +34,8 @@ main
 ```
 
 ### Contributors
-| <img width="100" src="https://github.com/cotidie.png"> | <img width="100" src="https://github.com/gykim22.png"> | 
-|:----------------------:|:----------------------:|
-| [장원석](https://github.com/cotidie) | [김기윤](https://github.com/gykim22) |
-| 🎓 회장,멘토 | 🎓 멘토 |
-| 15기 | 21기 |
+| <img width="100" src="https://github.com/cotidie.png"> | <img width="100" src="https://github.com/gykim22.png"> | <img width="100" src="https://github.com/github.png"> | 
+|:----------------------:|:----------------------:|:----------------------:|
+| [장원석](https://github.com/cotidie) | [김기윤](https://github.com/gykim22) | [다음 주인공](https://github.com/cotidie) |
+| 🎓 회장,멘토 | 🎓 멘토 | 🎓 다음 주인공 |
+| 15기 | 21기 | 00기 |
