@@ -25,7 +25,7 @@ fun Member4Screen(onBack: () -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("멤버 4") },
+                title = { Text("멘티 최지은") },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "뒤로가기")
@@ -39,10 +39,11 @@ fun Member4Screen(onBack: () -> Unit) {
             verticalArrangement = Arrangement.spacedBy(8.dp),
             horizontalAlignment = Alignment.Start
         ) {
-            Text("안녕하세요, 멤버 4입니다.", fontWeight = FontWeight.Bold)
+            Text("안녕하세요, 멘티 최지은입니다.", fontWeight = FontWeight.Bold)
+            Text("역할: 멘티 / 백엔드-모바일 연동 학습")
             Text("관심사: 테스트, 품질, 협업")
-            Text("한 줄 소개: 팀워크가 최고의 생산성입니다.")
-            Text("연락처: example4@email.com")
+            Text("한 줄 소개: 팀워크로 안정적인 서비스를 만듭니다.")
+            Text("연락처: mentee.choi@example.com")
         }
     }
 }

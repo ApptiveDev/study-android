@@ -25,7 +25,7 @@ fun Member3Screen(onBack: () -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("멤버 3") },
+                title = { Text("멘티 김민서") },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "뒤로가기")
@@ -39,10 +39,11 @@ fun Member3Screen(onBack: () -> Unit) {
             verticalArrangement = Arrangement.spacedBy(8.dp),
             horizontalAlignment = Alignment.Start
         ) {
-            Text("안녕하세요, 멤버 3입니다.", fontWeight = FontWeight.Bold)
+            Text("안녕하세요, 멘티 김민서입니다.", fontWeight = FontWeight.Bold)
+            Text("역할: 멘티 / UI 집중 학습")
             Text("관심사: UI 애니메이션, 성능 최적화")
-            Text("한 줄 소개: 작은 디테일을 좋아합니다.")
-            Text("연락처: example3@email.com")
+            Text("한 줄 소개: 작은 디테일이 최고의 사용자 경험을 만듭니다.")
+            Text("연락처: mentee.kimminseo@example.com")
         }
     }
 }

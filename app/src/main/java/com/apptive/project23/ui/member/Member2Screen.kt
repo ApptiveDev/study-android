@@ -26,7 +26,7 @@ fun Member2Screen(onBack: () -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("멤버 2") },
+                title = { Text("멘티 구민서") },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "뒤로가기")
@@ -40,10 +40,11 @@ fun Member2Screen(onBack: () -> Unit) {
             verticalArrangement = Arrangement.spacedBy(8.dp),
             horizontalAlignment = Alignment.Start
         ) {
-            Text("안녕하세요, 멤버 2입니다.", fontWeight = FontWeight.Bold)
-            Text("관심사: 네트워킹, 상태 관리")
-            Text("한 줄 소개: 안정적인 데이터 흐름을 만듭니다.")
-            Text("연락처: example2@email.com")
+            Text("안녕하세요, 멘티 구민서입니다.", fontWeight = FontWeight.Bold)
+            Text("역할: 멘티 / 학습 중")
+            Text("관심사: 네트워킹, 상태 관리, 리액티브 패턴")
+            Text("한 줄 소개: 안정적인 데이터 흐름을 만들기 위해 노력합니다.")
+            Text("연락처: mentee.goo@example.com")
         }
     }
 }
