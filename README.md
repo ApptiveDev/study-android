@@ -1,9 +1,11 @@
 # 안드로이드 23기 자기소개 프로젝트
 
-### 시작 전 초기화면
+### 메인화면
 <img src="https://github.com/user-attachments/assets/d1539cd4-be8d-4bc2-857d-9259f571397e" width=30%>
 
 ### 자기소개 프로젝트 완성
+
+완성작품 전시 예정입니다.
 
 ### Contributors
 | <img width="100" src="https://github.com/mark77234.png"> | <img width="100" src="https://github.com/github.png"> | <img width="100" src="https://github.com/github.png"> | <img width="100" src="https://github.com/github.png"> | 
