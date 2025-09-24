@@ -1,5 +1,8 @@
 # 안드로이드 23기 자기소개 프로젝트
 
+<img src="https://github.com/user-attachments/assets/d1539cd4-be8d-4bc2-857d-9259f571397e" width=30%>
+
+
 ### Contributors
 | <img width="100" src="https://github.com/mark77234.png"> | <img width="100" src="https://github.com/github.png"> | <img width="100" src="https://github.com/github.png"> | <img width="100" src="https://github.com/github.png"> | 
 |:----------------------:|:----------------------:|:----------------------:|:----------------------:|
