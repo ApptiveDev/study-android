@@ -1,4 +1,4 @@
-# 안드로이드 23기 단체 프로젝트
+# 안드로이드 23기 자기소개 프로젝트
 
 ### Contributors
 | <img width="100" src="https://github.com/mark77234.png"> | <img width="100" src="https://github.com/github.png"> | <img width="100" src="https://github.com/github.png"> | <img width="100" src="https://github.com/github.png"> | 
