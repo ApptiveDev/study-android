@@ -8,7 +8,7 @@
 완성작품 전시 예정입니다.
 
 ### Contributors
-| <img width="100" src="https://github.com/mark77234.png"> | <img width="100" src="https://github.com/github.png"> | <img width="100" src="https://github.com/github.png"> | <img width="100" src="https://github.com/github.png"> | 
+| <img width="100" src="https://github.com/mark77234.png"> | <img width="100" src="https://github.com/github.png"> | <img width="100" src="https://github.com/minseoriii.png"> | <img width="100" src="https://github.com/stfifo.png"> | 
 |:----------------------:|:----------------------:|:----------------------:|:----------------------:|
 | [이병찬](https://github.com/mark77234) | [구민서](https://github.com/mark77234) | [김민서](https://github.com/minseoriii) | [최지은](https://github.com/stfifo) |
 | 🎓 멘토 | 🎓 멘티 | 🎓 멘티 | 🎓 멘티 |
