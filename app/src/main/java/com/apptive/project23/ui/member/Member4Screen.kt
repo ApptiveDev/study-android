@@ -39,11 +39,13 @@ fun Member4Screen(onBack: () -> Unit) {
             verticalArrangement = Arrangement.spacedBy(8.dp),
             horizontalAlignment = Alignment.Start
         ) {
-            Text("안녕하세요, 멘티 최지은입니다.", fontWeight = FontWeight.Bold)
-            Text("역할: 멘티 / 백엔드-모바일 연동 학습")
-            Text("관심사: 테스트, 품질, 협업")
-            Text("한 줄 소개: 팀워크로 안정적인 서비스를 만듭니다.")
-            Text("연락처: mentee.choi@example.com")
+            Text("안녕하세요, 멘티 최지은입니다!", fontWeight = FontWeight.Bold)
+            Text("역할: 멘티 : 백엔드-모바일 연동 학습, 안드로이드 공부")
+            Text("관심사: 노래 듣기 / 독서감상문 쓰기 ")
+            Text("한 줄 소개: 요즘 일기쓰는데 일기 쓰기 귀찮은 것 같아요. 나 대신 일기 써주는 사람 있었으면 좋겠당ㅎㅎ")
+            Text("연락처: 010-3426-0279")
+            Text("좋아하는 노래: the beatles - octopus's garden")
+            Text("인생목표: 주식천재 되기!!")
         }
     }
 }
