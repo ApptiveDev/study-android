@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import com.apptive.project23.ui.theme.Project23Theme
 
 @Composable
+
 fun Member3Screen(onBack: () -> Unit) {
     Scaffold(
         topBar = {
@@ -38,12 +39,15 @@ fun Member3Screen(onBack: () -> Unit) {
             modifier = Modifier.fillMaxSize().padding(inner).padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
             horizontalAlignment = Alignment.Start
+
+
         ) {
             Text("안녕하세요, 멘티 김민서입니다.", fontWeight = FontWeight.Bold)
             Text("역할: 멘티 / UI 집중 학습")
             Text("관심사: UI 애니메이션, 성능 최적화")
-            Text("한 줄 소개: 작은 디테일이 최고의 사용자 경험을 만듭니다.")
-            Text("연락처: mentee.kimminseo@example.com")
+            Text("한 줄 소개: 안녕하세요")
+            Text("연락처: 010-5922-6714")
+            Text("취미 : 엽서 사모으기")
         }
     }
 }
