@@ -4,7 +4,7 @@
 <img src="https://github.com/user-attachments/assets/d1539cd4-be8d-4bc2-857d-9259f571397e" width=30%>
 
 ### 자기소개 프로젝트 완성(멘토)
-![74](https://github.com/user-attachments/assets/038970b4-0583-44b7-a41a-a6b14a3807e7)
+<img src="https://github.com/user-attachments/assets/038970b4-0583-44b7-a41a-a6b14a3807e7" width=30%>
 
 ### 자기소개 프로젝트 완성(멘티)
 
