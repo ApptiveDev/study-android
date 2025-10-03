@@ -41,10 +41,11 @@ fun Member2Screen(onBack: () -> Unit) {
             horizontalAlignment = Alignment.Start
         ) {
             Text("안녕하세요, 멘티 구민서입니다.", fontWeight = FontWeight.Bold)
-            Text("역할: 멘티 / 학습 중")
+            Text("역할: 멘티 / 백엔드-모바일 연동 학습, 안드로이드 공부")
             Text("관심사: 네트워킹, 상태 관리, 리액티브 패턴")
-            Text("한 줄 소개: 안정적인 데이터 흐름을 만들기 위해 노력합니다.")
-            Text("연락처: mentee.goo@example.com")
+            Text("한 줄 소개: 반갑습니다")
+            Text("연락처: 010-3005-1441")
+            Text("취미: 손으로 사부작사부작 만드는 것을 좋아합니다")
         }
     }
 }
