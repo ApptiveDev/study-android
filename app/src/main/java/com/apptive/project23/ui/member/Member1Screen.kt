@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -20,7 +19,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.GridOn
 import androidx.compose.material.icons.filled.Link
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Person
@@ -117,8 +115,14 @@ fun Member1Screen(onBack: () -> Unit) { // 매개변수도 없고 반환값도 �
 
             }
 
-            Column(verticalArrangement = Arrangement.spacedBy(4.dp)) { // 인스타 정보란
-                Row {
+            Column(
+                verticalArrangement = Arrangement.spacedBy(4.dp),
+
+                ) { // 인스타 정보란
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.Start
+                ) {
                     Icon(
                         imageVector = Icons.Filled.Link,
                         contentDescription = "링크",
@@ -161,7 +165,6 @@ fun Member1Screen(onBack: () -> Unit) { // 매개변수도 없고 반환값도 �
         }
     }
 }
-
 
 
 @Preview(showBackground = true)
