@@ -7,16 +7,18 @@
 - 매 스터디 종료 후 개인 브랜치는 삭제합니다.
 
 ### 브랜치 구조
-- 과제 명과 참여자 명으로 구성됩니다.
-- ```과제명/참여자명``` 브랜치에 결과물을 업로드하고 ```세션명/main``` 브랜치에 PR합니다.
-- 참여자 명은 소문자 영문으로 합니다.
-
+- '과제번호-과제명/main'과 개인 브랜치로 진행합니다.
+- 해당하는 과제의 `main` 브랜치로부터 개인 브랜치를 따서 과제를 진행합니다.
+  - ex) `02-compose/wonseok`  
+- 과제 구현 후 해당하는 과제의 `main` 브랜치로 Pull Request를 요청합니다.
+  - ex) `02-compose/wonseok` -> `02-compose/main`
+ 
 ```plain
-main
-  01-basics/main       // 과제 안내가 위치하는 곳
-    01-basics/wonseok
-    01-basics/giyun
-    ...
+01-basics/main        // 1번 과제 안내가 위치하는 곳
+  01-basics/wonseok   // 개인 브랜치를 파서 1번 과제 진행
+  ...
+02-compose/main       // 2번 과제 안내가 위치하는 곳
+  02-compose/wonseok  // 개인 브랜치를 파서 2번 과제 진행
 ```
 
 ### 폴더 구조
