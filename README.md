@@ -21,20 +21,6 @@
   02-compose/wonseok  // 개인 브랜치를 파서 2번 과제 진행
 ```
 
-### 폴더 구조
-- 세션 브렌치의 최상위 폴더에 자신이 속한 기수 번호를 이름으로 한 폴더를 만듭니다.
-  - ex) 21st, 22nd, 23rd, 24th......
-- 해당 기수 폴더내에조사한 결과물에 대한 간단한 설명을 README-이름.md에 작성합니다.
-```plain
-|-
-  README.md
-  |- <기수>
-    - README.md
-    - README-이름.md
-    - README-이름2.md
-    - ...
-```
-
 
 ### Contributors
 | <img width="100" src="https://github.com/cotidie.png"> | <img width="100" src="https://github.com/gykim22.png"> | <img width="100" src="https://github.com/mark77234.png"> | <img width="100" src="https://github.com/github.png"> | 
