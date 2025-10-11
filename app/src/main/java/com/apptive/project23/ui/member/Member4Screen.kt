@@ -33,7 +33,7 @@ import androidx.compose.ui.unit.dp
 import com.apptive.project23.ui.theme.Project23Theme
 
 @Composable
-fun Member2Screen(onBack: () -> Unit) {
+fun Member4Screen(onBack: () -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
