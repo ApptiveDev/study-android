@@ -24,7 +24,7 @@
 
 
 ### Contributors
-| <img width="100" src="https://github.com/cotidie.png"> | <img width="100" src="https://github.com/gykim22.png"> | <img width="100" src="https://github.com/mark77234.png"> | <img width="100" src="https://github.com/github.png"> | 
+| <img width="100" src="https://github.com/cotidie.png"> | <img width="100" src="https://github.com/GiyunKim00.png"> | <img width="100" src="https://github.com/mark77234.png"> | <img width="100" src="https://github.com/github.png"> | 
 |:----------------------:|:----------------------:|:----------------------:|:----------------------:|
 | [장원석](https://github.com/cotidie) | [김기윤](https://github.com/GiyunKim00) | [이병찬](https://github.com/mark77234) | [다음 주인공](https://github.com/github) |
 | 🎓 전 회장, 멘토 | 🎓 멘토 | 🎓 멘토 | 🎓 다음 주인공 |
